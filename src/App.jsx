@@ -1,13 +1,29 @@
 import "./App.css";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
-import { Outlet } from "react-router-dom";
+import routes from "./routes";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      {/* <Hero />
+      <Overview />
+      <Services />
+      <Clients />
+      <Awards />
+      <GetInTouch /> */}
+      <Routes>
+        {routes.map((item, index) => (
+          <Route
+            key={index}
+            path={item.path}
+            name={item.name}
+            element={item.element}
+          />
+        ))}
+      </Routes>
       <Footer />
     </>
   );

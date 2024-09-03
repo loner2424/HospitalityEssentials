@@ -6,7 +6,7 @@ import Overview4 from '../assets/Overview4.png'
 
 const Overview = () => {
   return (
-    <div className=" m-4 md:flex justify-center">
+    <div className="relative z-30 w-full mt-4 md:flex justify-center bg-white">
       <div className="col-1 md:w-1/2 md:px-16 md:mx-16 justify-center font-poppins  text-[#005A9A]  md:m-8 md:py-8 ">
         <div className="font-bold md:text-5xl text-xl">
           We believe a tailored approach is key to success.
