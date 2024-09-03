@@ -1,4 +1,3 @@
-import React from "react";
 import Background from "../assets/HeroBg.png";
 import Mobile from "../assets/HeroBg-Mobile.png";
 import excellence from "../assets/excellence.png";

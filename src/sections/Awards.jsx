@@ -30,10 +30,10 @@ const Awards = () => {
 
           {/* Container for Images */}
           <div className="md:flex grid grid-cols-2 justify-center h-auto mt-16 max-h-lvh md:mt-24">
-            <img className="m-1 p-2 justify-self-end" src={img1} alt="" />
-            <img className="m-1 h-auto p-2 " src={img4} alt="" />
-            <img className="m-1 p-2 justify-self-end" src={img3} alt="" />
-            <img className="m-1 p-2" src={img2} alt="" />
+            <img className="justify-self-end" src={img1} alt="" />
+            <img className="h-auto" src={img4} alt="" />
+            <img className="justify-self-end" src={img3} alt="" />
+            <img src={img2} alt="" />
           </div>
         </div>
         <div className="md:m-4 p-2 md:p-8 mt-16 md:mt-12 text-center">
@@ -50,10 +50,10 @@ const Awards = () => {
 
           {/* Container for Images */}
           <div className="md:flex grid grid-cols-2 justify-center h-auto mt-16 max-h-lvh md:mt-24">
-            <img className="m-1 p-2 justify-self-end" src={img1} alt="" />
-            <img className="m-1 h-auto p-2 " src={img4} alt="" />
-            <img className="m-1 p-2 justify-self-end" src={img3} alt="" />
-            <img className="m-1 p-2" src={img2} alt="" />
+            <img className="justify-self-end" src={img1} alt="" />
+            <img className="h-auto" src={img4} alt="" />
+            <img className="justify-self-end" src={img3} alt="" />
+            <img src={img2} alt="" />
           </div>
         </div>
       </div>
