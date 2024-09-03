@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import useScrollingHeader from "../hooks/useScrollingHeader";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const headerClassName = useScrollingHeader();
+
   return (
-    <nav className="bg-white font-inter">
-      <div className="max-w-7xl mx-auto px-4  py-3 lg:flex justify-between items-center">
+    <nav className={` ${headerClassName} fixed top-0 left-0 w-full font-inter`}>
+      <div className="max-w- 7xl mx-auto px-4 py-3 lg:flex justify-between items-center">
         {/* Logo */}
-        <div className="flex justify-between items-center">
+        <div className="flex lg:block justify-between items-center lg:pl-14">
           <div className="uppercase">
-            <p href="#" className="text-black flex-col text-lg font-semibold">
+            <p href="#" className="text-  black flex-col text-lg font-bold">
               Hospitality
             </p>
-            <p href="#" className="text-black text-lg -my-2 font-semibold">
+            <p href="#" className="tex t-black text-lg -my-2 font-bold">
               Essentials
             </p>
           </div>
@@ -40,11 +45,11 @@ function Navbar() {
             isMenuOpen ? "block" : "hidden"
           } lg:flex lg:items-center lg:w-auto`}
         >
-          <ul className="list-reset lg:flex justify-end font-medium flex-1 uppercase items-center font-lato ">
+          <ul className="list-reset lg:flex justify-end font-medium flex-1 lg:font-semibold uppercase items-center font-lato ">
           <li className="mr-3 md:pt-0 pt-8">
               <a
-                href="#"
-                className="text-black flex justify-center hover:text-gray-700  md:py-2 md:px-2 "
+                href="/about"
+                className="text- black flex justify-center h over:text-gray-700  md:py-2 md:px-2 "
               >
                About
               </a>
@@ -52,7 +57,7 @@ function Navbar() {
             <li className="mr-3">
               <a
                 href="#"
-                className="text-black flex justify-center hover:text-gray-700    md:px-2 "
+                className="text- black flex justify-center h over:text-gray-700    md:px-2 "
               >
                 Services
               </a>
@@ -60,24 +65,24 @@ function Navbar() {
             <li className="mr-3">
               <a
                 href="#"
-                className="text-black flex justify-center hover:text-gray-700   md:px-2"
+                className="text- black flex justify-center h over:text-gray-700   md:px-2"
               >
-                Team
+                Clients
               </a>
             </li>
-            <li className="mr-3">
+            {/* <li className="mr-3">
               <a
                 href="#"
-                className="text-black hover:text-gray-700 flex justify-center  md:px-2 "
+                className="text- black h over:text-gray-700 flex justify-center  md:px-2 "
               >
                 Gallery
               </a>
-            </li>
+            </li> */}
             
             <li className="mr-3">
               <a
                 href="#"
-                className="text-black hover:text-gray-700 flex justify-center  md:px-2 "
+                className="text- black h over:text-gray-700 flex justify-center  md:px-2 "
               >
                 Contact
               </a>

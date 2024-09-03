@@ -8,7 +8,7 @@ import img4 from "../assets/Awards/img4.png";
 
 const Awards = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       {/* Desktop Background Image */}
       <img className="h-full hidden md:block " src={bg} alt="" />
 
