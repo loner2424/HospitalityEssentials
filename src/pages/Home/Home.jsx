@@ -15,7 +15,7 @@ const Home = () => {
       <Services />
       <Awards />
       <Clients />
-      <GetInTouch />
+      {/* <GetInTouch /> */}
     </div>
   );
 };

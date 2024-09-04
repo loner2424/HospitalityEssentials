@@ -3,6 +3,7 @@ import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
 import routes from "./routes";
 import { Route, Routes } from "react-router-dom";
+import GetInTouch from "./sections/GetInTouch";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           />
         ))}
       </Routes>
+      <GetInTouch/>
       <Footer />
     </>
   );

@@ -13,7 +13,10 @@ import Township from "../assets/Township.png";
 const Services = () => {
   return (
     <div>
-      <div className="absolute w-full md:px-24 md:py-16">
+      <div 
+        className="absolute w-full md:px-24 md:py-16 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url('${bg}')` }}
+      >
         <div className="flex justify-between w-full">
           <div className=" flex md:text-4xl text-md justify-center items-center w-full mt-4 md:justify-start font-bold font-poppins text-[#8BDAFF]">
             Our Services

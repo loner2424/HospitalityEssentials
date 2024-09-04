@@ -7,7 +7,7 @@ import Phone from '../assets/Phone.png'
 
 const GetInTouch = () => {
   return (
-<div className="relative">
+<div className="relative bg-center bg-cover bg-fixed" style={{ backgroundImage: `url('${bg}')` }}>
   {/* Desktop Background Image */}
   <img className="h-full hidden md:block" src={bg} alt="" />
 
@@ -22,9 +22,9 @@ const GetInTouch = () => {
   </div>
 
   {/* Container for map and contact information */}
-  <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center pb-10 pt-10">
+  <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center py-4">
     {/* White div */}
-    <div className="bg-white md:h-48 h-96 rounded-xl w-4/5 md:w-2/5 flex flex-col md:flex-row items-center justify-center">
+    <div className="bg-white p-4 md:h-64 h-96 rounded-xl w-4/5 md:w-1/2 flex flex-col md:flex-row items-center justify-center">
       {/* Embedded map */}
       <div className="w-full md:w-1/2 p-4 md:h-full h-1/2 flex justify-self-center items-center justify-center">
         <iframe

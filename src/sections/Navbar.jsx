@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useScrollingHeader from "../hooks/useScrollingHeader";
 import { useNavigate } from "react-router-dom";
 
+import Logo from "../assets/Logo/logo.png";
+
 function Navbar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,17 +11,22 @@ function Navbar() {
   const headerClassName = useScrollingHeader();
 
   return (
-    <nav className={` ${headerClassName} fixed top-0 left-0 w-full font-inter`}>
-      <div className="max-w- 7xl mx-auto px-4 py-3 lg:flex justify-between items-center">
+    <nav
+      className={` ${headerClassName} fixed top-0 left-0 w-full font-inter drop-shadow-xl`}
+    >
+      <div className="max-w- 7xl mx-auto px-4 py-2 lg:flex justify-between items-center">
         {/* Logo */}
         <div className="flex lg:block justify-between items-center lg:pl-14">
-          <div className="uppercase">
-            <p href="#" className="text-  black flex-col text-lg font-bold">
-              Hospitality
-            </p>
-            <p href="#" className="tex t-black text-lg -my-2 font-bold">
-              Essentials
-            </p>
+          <div className="flex gap-2">
+            <img src={Logo} className="size-12" />
+            <div className="uppercase flex flex-col">
+              <a href="/" className="text-  black flex-col text-lg font-bold">
+                Hospitality
+              </a>
+              <a href="/" className="tex t-black text-lg -my-2 font-bold">
+                Essentials
+              </a>
+            </div>
           </div>
 
           {/* Hamburger Icon for mobile */}
@@ -39,54 +46,42 @@ function Navbar() {
           </div>
         </div>
 
-        
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } lg:flex lg:items-center lg:w-auto`}
+          } lg:flex lg:items-center lg:w-auto gap-3`}
         >
           <ul className="list-reset lg:flex justify-end font-medium flex-1 lg:font-semibold uppercase items-center font-lato ">
-          <li className="mr-3 md:pt-0 pt-8">
-              <a
-                href="/about"
-                className="text- black flex justify-center h over:text-gray-700  md:py-2 md:px-2 "
-              >
-               About
-              </a>
-            </li>
-            <li className="mr-3">
-              <a
-                href="#"
-                className="text- black flex justify-center h over:text-gray-700    md:px-2 "
-              >
-                Services
-              </a>
-            </li>
-            <li className="mr-3">
-              <a
-                href="#"
-                className="text- black flex justify-center h over:text-gray-700   md:px-2"
-              >
-                Clients
-              </a>
-            </li>
-            {/* <li className="mr-3">
-              <a
-                href="#"
-                className="text- black h over:text-gray-700 flex justify-center  md:px-2 "
-              >
-                Gallery
-              </a>
-            </li> */}
-            
-            <li className="mr-3">
-              <a
-                href="#"
-                className="text- black h over:text-gray-700 flex justify-center  md:px-2 "
-              >
-                Contact
-              </a>
-            </li>
+
+            <a
+              id="hide-after-click"
+              href="/about"
+              className="w-1/5 text-center mx-4 text-md transition-none duration-500"
+            >
+              <div className="flex justify-center mx-auto w-fit px-2 relative cursor-pointer transition-none ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-[#005A9A] before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-300 after:absolute after:bg-[#005A9A] after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">ABOUT</div>
+            </a>
+            <a
+              id="hide-after-click"
+              href="/services"
+              className="w-1/5 text-center mx-4 text-md transition-none duration-500"
+            >
+              <div className="flex justify-center mx-auto w-fit px-2 relative cursor-pointer transition-none ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-[#005A9A] before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-300 after:absolute after:bg-[#005A9A] after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">SERVICES</div>
+            </a>
+            <a
+              id="hide-after-click"
+              href="/clients"
+              className="w-1/5 text-center mx-4 text-md transition-none duration-500"
+            >
+              <div className="flex justify-center mx-auto w-fit px-2 relative cursor-pointer transition-none ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-[#005A9A] before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-300 after:absolute after:bg-[#005A9A] after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">CLIENTS</div>
+            </a>
+            <a
+              id="hide-after-click"
+              href="/contact"
+              className="w-1/5 text-center mx-4 text-md transition-none duration-500"
+            >
+              <div className="flex justify-center mx-auto w-fit px-2 relative cursor-pointer transition-none ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-[#005A9A] before:origin-center before:h-[3px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-300 after:absolute after:bg-[#005A9A] after:origin-center after:h-[3px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">CONTACT</div>
+            </a>
+
           </ul>
         </div>
       </div>
